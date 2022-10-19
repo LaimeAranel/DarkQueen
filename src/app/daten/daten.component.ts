@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-  empList: Array<Daten> = [];
+Daten = daten;
 
     getData() {
       let CustomObj = new Daten();
@@ -19,8 +19,8 @@ export class DatenComponent implements OnInit {
       CustomObj.username= "";
       CustomObj.password = "";
       CustomObj.email= "";
-      this.empList.push(CustomObj)
-      
+      this.Daten.push(CustomObj)
+
     }
     
     password = "hidden"

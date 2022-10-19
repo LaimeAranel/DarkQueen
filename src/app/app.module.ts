@@ -6,8 +6,7 @@ import { AufgabenComponent } from './aufgaben/aufgaben.component';
 import { DatenComponent } from './daten/daten.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
-import { LocalStorageWithProviderComponent } from './local-storage-with-provider/local-storage-with-provider.component';
-
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
@@ -15,12 +14,12 @@ import { LocalStorageWithProviderComponent } from './local-storage-with-provider
     AufgabenComponent,
     DatenComponent,
     ApplyFormComponent,
-    LocalStorageWithProviderComponent,
  
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: 'Daten', component: DatenComponent },
     ])
