@@ -11,19 +11,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-Daten = daten
+  empList: Array<Daten> = [];
 
-    addData() {
-      let Data = new Daten()
-      this.Daten.push(Data)
+    getData() {
+      let CustomObj = new Daten();
+      CustomObj.id= "";
+      CustomObj.username= "";
+      CustomObj.password = "";
+      CustomObj.email= "";
+      this.empList.push(CustomObj)
+      
     }
-    selectedList?: Daten;
-    onSelect(daten: Daten): void{
-      this.selectedList = daten
-    }
-    addForm() {
-      this.Daten.push();
-    }
+    
     password = "hidden"
  public textShow = true;
 showText(){

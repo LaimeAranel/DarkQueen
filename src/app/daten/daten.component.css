@@ -39,3 +39,6 @@ body {
   align-items: center;
 }
 .button{border-radius: 50%;}
+.thead{
+  background-color:blue
+}
