@@ -1,0 +1,101 @@
+table.scroll thead tr:after {
+	content: '';
+	overflow-y: scroll;
+	visibility: hidden;
+}
+table.scroll thead th {
+	flex: 1 auto;
+	display: block;
+}
+table.scroll tbody {
+	display: block;
+	width: 100%;
+	overflow-y: auto;
+	height: auto;
+	max-height: 200px;
+}
+table.scroll thead tr,
+table.scroll tbody tr {
+	display: flex;
+}
+table.scroll tbody tr td {
+	flex: 1 auto;
+	word-wrap: break;
+}
+
+body {
+  background-color: #ff8a80;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*--Button Styles--*/
+.btn-slice {
+  padding: 1.2rem 2.5rem;
+  border: 2px solid #ffffff;
+  border-radius: 0rem;
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  position: relative;
+}
+
+.btn-slice .top  {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  top: 0;  
+
+}
+
+.btn-slice .bottom  {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  bottom: 0;
+    
+
+}
+
+.btn-slice .bottom span {
+  top: -6px;
+  position: absolute;
+  left: 0;
+}
+
+.btn-slice:hover .top {
+  top: -5px;
+
+}
+
+.btn-slice:hover .bottom {
+  bottom: -5px;
+
+}
+.btn-slice:hover, .btn-slice:focus, .btn-slice:active {
+  margin-left: 10px;
+}
+.btn-slice:before{
+  content: '';
+  height: 1px;
+  width: 60px;
+  background-color: #ffffff;
+  position: absolute;
+  margin-top: 6px;
+  right: -35px;
+}
+.btn-slice:hover:before{
+  width: 130%;
+}
+.button{border-radius: 50%;}
