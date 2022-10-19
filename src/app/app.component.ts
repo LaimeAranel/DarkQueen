@@ -15,4 +15,4 @@ export class AppComponent {
     onSelect(daten: Daten): void {
       this.showDaten = daten;
     }
-}
+  }

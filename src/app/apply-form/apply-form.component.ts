@@ -1,14 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-
-import { ApplyFormBase } from './questions';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-question',
-  templateUrl: 'src/app/apply-form/apply.component.html'
+  selector: 'app-apply-form',
+  templateUrl: './apply-form.component.html',
+  styleUrls: ['./apply-form.component.css']
 })
-export class ApplyFormComponent {
-  @Input() question!: ApplyFormBase<string>;
-  @Input() form!: FormGroup;
-  get isValid() { return this.form.controls[this.question.key].valid; }
+export class ApplyFormComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
