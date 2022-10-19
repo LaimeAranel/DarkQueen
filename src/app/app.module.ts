@@ -6,6 +6,7 @@ import { AufgabenComponent } from './aufgaben/aufgaben.component';
 import { DatenComponent } from './daten/daten.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
+import { LocalStorageWithProviderComponent } from './local-storage-with-provider/local-storage-with-provider.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ApplyFormComponent } from './apply-form/apply-form.component';
     AufgabenComponent,
     DatenComponent,
     ApplyFormComponent,
+    LocalStorageWithProviderComponent,
  
   ],
   imports: [

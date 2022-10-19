@@ -1,4 +1,4 @@
-<table class='table'>
+<table class='daten'>
   <thead>
     <tr>
       <th>id</th>
@@ -9,18 +9,18 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let daten of Daten;">
-      <td>{{daten.id}}</td>
-      <td>{{daten.username}}</td>
-      <td>{{daten.password}}</td>
-      <td>{{daten.email}}</td>
+    <tr *ngFor="let daten of empList;">
+      <li>{{daten.id}}</li>
+      <li>{{daten.username}}</li>
+      <li>{{daten.password}}</li>
+      <li>{{daten.email}}</li>
     </tr>
   </tbody>
 </table>
 <form>
   
 
-
+<div>
 <form>
   <label for ="Platform">Platform:</label><br>
   <input type="text" id="id" name="id"><br>
@@ -30,6 +30,7 @@
   <input type="email" id="email" name="Email"><br>
  <label for="password">Password:</label><br>
   <input type="password" id="pwd" name="pwd"><br>
-  <button type = "submit" (click)="addData()">add</button>
-</form>
-           
+  
+  <button type = "submit" (click)="getData()">add</button>    
+  </form>      
+</div>
