@@ -9,15 +9,27 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let daten of Daten;">
-      <td>{{daten.id}}</td>
-      <td>{{daten.username}}</td>
-      <td>{{daten.password}}</td>
-      <td>{{daten.email}}</td>
-    </tr>
+    <tr *ngFor="let Daten of Daten;">
+      <td>{{Daten.id}}</td>
+      <td>{{Daten.username}}</td>
+      <td>{{Daten.password}}</td>
+      <td>{{Daten.email}}</td>
+</tr>
   </tbody>
-</table>
-<form>
-  <button type = "submit" (click)="getData()">add</button>  
-  <app-apply-form></app-apply-form>
-  </form>      
+</table> 
+<form>    
+   <label for ="id">Platform:</label><br>
+      <input type="text" id="id" name="text"><br>
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br> 
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="Email"><br> 
+     <label for="password">Password:</label><br>
+      <input type="password" id="password" name="pwd"><br> 
+      <button type = "button" (click)=addToRalf()>add</button>
+</form> 
+
+  
+     
+    
+    

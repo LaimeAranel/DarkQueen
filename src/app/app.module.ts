@@ -6,7 +6,7 @@ import { AufgabenComponent } from './aufgaben/aufgaben.component';
 import { DatenComponent } from './daten/daten.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [

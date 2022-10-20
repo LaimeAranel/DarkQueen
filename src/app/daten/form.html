@@ -1,4 +1,5 @@
 <form>
+  <div *ngFor="let Daten of Daten">
     <label for ="Platform">Platform:</label>
     <input type="text" id="txt" name="text">
     <label for="username">Username:</label><br>
@@ -7,5 +8,7 @@
     <input type="email" id="email" name="Email">
    <label for="pwd">Password:</label><br>
     <input type="password" id="pwd" name="pwd">
-  </form>
+    <button type = "submit" (click)=addToRalf()>add</button> 
+  </div>
+</form>
  

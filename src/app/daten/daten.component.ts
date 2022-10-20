@@ -12,18 +12,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class DatenComponent implements OnInit {
 Daten = daten;
-
-    getData() {
-      let CustomObj = new Daten();
-      CustomObj.id= "";
-      CustomObj.username= "";
-      CustomObj.password = "";
-      CustomObj.email= "";
-      this.Daten.push(CustomObj)
-
-    }
+  daten: Daten[] = []
+addToRalf(){                        
+      let daten = new Daten();
+      this.Daten.push(daten);
+      };
     
-    password = "hidden"
+  
+  
  public textShow = true;
 showText(){
   this.textShow = true;
@@ -40,3 +36,4 @@ showText(){
 
 
 }
+
