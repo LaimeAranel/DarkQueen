@@ -7,6 +7,8 @@ import { DatenComponent } from './daten/daten.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
 import { FormsModule } from '@angular/forms'; 
+import { LocalService } from './localestorage/local_storage.service';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -14,17 +16,18 @@ import { FormsModule } from '@angular/forms';
     AufgabenComponent,
     DatenComponent,
     ApplyFormComponent,
+    ProfileEditorComponent,
  
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule,
     RouterModule.forRoot([
       {path: 'Daten', component: DatenComponent },
+      {path: 'Appcomponent', component: AppComponent} 
     ])
   ],
-  providers: [],
+  providers: [LocalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -47,5 +47,8 @@ th {
   background-color: grey
 }
 tbody{
-  grid-auto-rows: auto;
+
+background-color: rgb(73, 73, 73);
+grid-auto-rows: auto;
 }
+

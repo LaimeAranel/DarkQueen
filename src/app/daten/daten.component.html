@@ -9,7 +9,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let Daten of Daten;">
+    <tr *ngFor="let Daten of daten;">
       <td>{{Daten.id}}</td>
       <td>{{Daten.username}}</td>
       <td>{{Daten.password}}</td>
@@ -17,19 +17,23 @@
 </tr>
   </tbody>
 </table> 
-<form>    
-   <label for ="id">Platform:</label><br>
-      <input type="text" id="id" name="text"><br>
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username"><br> 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="Email"><br> 
-     <label for="password">Password:</label><br>
-      <input type="password" id="password" name="pwd"><br> 
-      <button type = "button" (click)=addToRalf()>add</button>
-</form> 
 
-  
      
+<div>
+    <label for ="Platform">Platform:</label>
+    <input type="text" id="id" name="text">
+   
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br> 
+ 
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="Email">
+
+   <label Ngfor="password">Password:</label><br>
+    <input type="password" id="password" name="pwd">
+<button type = "submit" (click)=addToRalf()>add</button> 
     
+ 
+</div>
+ 
     
