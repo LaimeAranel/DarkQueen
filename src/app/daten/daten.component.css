@@ -47,6 +47,9 @@ th {
     column-gap: 40px;
   background-color: grey
 }
+tr:hover {
+  background-color: rgb(70, 70, 70);
+}
 tbody{
 border-collapse: collapse;
 background-color: rgb(73, 73, 73);
