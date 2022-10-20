@@ -44,10 +44,11 @@ body {
 }
 th {
   column-count: 4;
+    column-gap: 40px;
   background-color: grey
 }
 tbody{
-
+border-collapse: collapse;
 background-color: rgb(73, 73, 73);
 grid-auto-rows: auto;
 }

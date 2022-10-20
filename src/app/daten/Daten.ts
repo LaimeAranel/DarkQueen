@@ -1,8 +1,7 @@
-export class Daten {
-        public id: string = '';
-        public username: string = '';
-        public password: string = '';
-        public email: string = '';
-    constructor( )
-{}
+export interface Daten {
+    id: string;
+    username:string;
+    password:string;
+    email:string;
+
 }

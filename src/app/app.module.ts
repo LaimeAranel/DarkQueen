@@ -8,7 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ApplyFormComponent } from './apply-form/apply-form.component';
 import { FormsModule } from '@angular/forms'; 
 import { LocalService } from './localestorage/local_storage.service';
-import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { FormComponent } from './form/form.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     AufgabenComponent,
     DatenComponent,
     ApplyFormComponent,
-    ProfileEditorComponent,
+    FormComponent,
  
   ],
   imports: [

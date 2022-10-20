@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Daten} from 'src/app/daten/Daten'
+import {InMemoryDataService} from 'src/app/daten/Daten.service'
 import { map } from 'rxjs/operators';
-import { daten } from './mock-Daten'; 
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 
@@ -11,13 +11,25 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-  daten = Daten[]
-addToRalf(){                        
-      let daten = new Daten();
-      return this.daten.push({id: this.daten.id,});
-      };
-             
-             
+  Daten: Daten[];
+ 
+
+
+ 
+  constructor( private InMemoryDataService:InMemoryDataService) {  
+    this.Daten = [];
+  }
+
+  ngOnInit(): void {
+  } 
+
+addData(){  
+                      
+      
+      console.log(this.Daten);
+     return this.Daten.push(); };
+    
+  
   
  public textShow = true;
 showText(){
@@ -27,12 +39,7 @@ showText(){
   this.textShow = false;
  }
  
- 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 
 }
+
 
