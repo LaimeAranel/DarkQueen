@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Daten} from 'src/app/daten/Daten'
-import {daten} from 'src/app/daten/mock-Daten'
 import { map } from 'rxjs/operators';
+import { daten } from './mock-Daten'; 
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 
@@ -11,14 +11,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-Daten = daten;
-  daten: Daten[] = []
+  daten = Daten[]
 addToRalf(){                        
       let daten = new Daten();
-      this.Daten.push(daten);
+      return this.daten.push({id: this.daten.id,});
       };
-    
-  
+             
+             
   
  public textShow = true;
 showText(){
