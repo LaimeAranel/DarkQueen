@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {Daten} from 'src/app/daten/Daten'
 import {daten} from 'src/app/daten/mock-Daten'
 import { map } from 'rxjs/operators';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { LocalService } from '../localestorage/local_storage.service';
 
 
@@ -12,15 +12,19 @@ import { LocalService } from '../localestorage/local_storage.service';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-Daten = daten;
-@Input() Data?: Daten;
-constructor() { }
+  control: FormControl;
+ 
+  @Input() Data?: Daten;
+  
+constructor(private fb: FormBuilder) { this.control = fb.control({value: 'my val', disabled: true});}
+ Daten = this.fb.group({
+    Platform:[""],
+    username:[""],
+    password:[""],
+    email:[""]
+  })
 
-addData() {
-    let Data = new Daten()
-    this.Daten.push(Data)
-    console.log(Data)
-  }
+
   selectedList!: Daten;
   onSelect(daten: Daten): void{
     this.selectedList = daten

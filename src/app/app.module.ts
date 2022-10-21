@@ -10,11 +10,13 @@ import { DetailComponent } from './detail/detail.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     DatenComponent,
     DetailComponent,
+
  
   ],
   imports: [
