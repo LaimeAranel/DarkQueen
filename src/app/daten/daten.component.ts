@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Daten} from 'src/app/daten/Daten'
-import {InMemoryDataService} from 'src/app/daten/Daten.service'
+import {daten} from 'src/app/daten/mock-Daten'
 import { map } from 'rxjs/operators';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { LocalService } from '../localestorage/local_storage.service';
 
 
 @Component({
@@ -11,35 +12,32 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-  Daten: Daten[];
- 
+Daten = daten;
+@Input() Data?: Daten;
+constructor() { }
 
-
- 
-  constructor( private InMemoryDataService:InMemoryDataService) {  
-    this.Daten = [];
+addData() {
+    let Data = new Daten()
+    this.Daten.push(Data)
+    console.log(Data)
   }
-
-  ngOnInit(): void {
-  } 
-
-addData(){  
-                      
-      
-      console.log(this.Daten);
-     return this.Daten.push(); };
+  selectedList!: Daten;
+  onSelect(daten: Daten): void{
+    this.selectedList = daten
     
-  
-  
- public textShow = true;
+  }
+  deleteDaten(){
+      Daten === undefined; 
+  }
+  password = "hidden"
+public textShow = true;
 showText(){
-  this.textShow = true;
- }
- hideText(){
-  this.textShow = false;
- }
- 
-
+this.textShow = true;
 }
+hideText(){
+this.textShow = false;
+} 
 
-
+ngOnInit(): void {
+}
+}

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as CryptoJS from 'crypto-js';
 
 @Injectable({
   providedIn: 'root'
@@ -6,15 +7,18 @@ import { Injectable } from '@angular/core';
 export class LocalService {
 
   key = "123";
-
-  constructor() { }
+  
+  constructor(private localStore: LocalService) {  
+    
+  }
 
   public saveData(key: string, value: string) {
-    localStorage.setItem(key, value);
+    localStorage.setItem(key, this.encrypt(value));
   }
 
   public getData(key: string) {
-    return localStorage.getItem(key)
+    let data = localStorage.getItem(key)|| "";
+    return this.decrypt(data);
   }
   public removeData(key: string) {
     localStorage.removeItem(key);
@@ -23,5 +27,12 @@ export class LocalService {
   public clearData() {
     localStorage.clear();
   }
-}
 
+  private encrypt(txt: string): string {
+    return CryptoJS.AES.encrypt(txt, this.key).toString();
+  }
+
+  private decrypt(txtToDecrypt: string) {
+    return CryptoJS.AES.decrypt(txtToDecrypt, this.key).toString(CryptoJS.enc.Utf8);
+  }
+}

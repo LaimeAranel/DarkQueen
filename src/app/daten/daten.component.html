@@ -12,12 +12,30 @@
     <tr *ngFor="let Daten of Daten;">
       <td>{{Daten.id}}</td>
       <td>{{Daten.username}}</td>
-      <td>{{Daten.password}}</td>
+      <font style="font-size:0px"> - text 
+      <td>{{Daten.password}}</td> </font>
       <td>{{Daten.email}}</td>
+      <button (click)=deleteDaten() >delete</button>
 </tr>
   </tbody>
 </table> 
+   
+<div>
+  <label for ="Daten.id">Platform:</label><br> 
+  <input type="text" ng-model="Daten.id" id="Daten.Platform" name="text"><br> 
+ 
+  <label for="Daten.username">Username:</label><br>
+  <input type="text" ng-model="Daten.username" id="Daten.username" name="username"><br> 
+
+  <label for="Daten.password">Password:</label><br>
+  <input type="password" ng-model="Daten.password" id="Daten.password" name="pwd"><br> 
+ <label for="Daten.email">Email:</label><br>
+  <input type="email" ng-model="Daten.email" id="Daten.email" name="Email"><br> 
+
+</div>
+
+<button type = "submit" (click)=addData()>add</button> 
 
      
-<app-form></app-form>
-<button (click)=addData()>add</button>
+    
+    

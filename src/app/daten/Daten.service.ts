@@ -5,7 +5,7 @@ import { Daten } from './Daten';
 @Injectable({
   providedIn: 'root',
 })
-export class InMemoryDataService implements InMemoryDbService {
+export class DataService implements InMemoryDbService {
   createDb() {
     const Data = [
         { id: "Beta", username: 'Dr. Nice', password: "adsoif", email: "RistawistaAlasista@gmx.de" },

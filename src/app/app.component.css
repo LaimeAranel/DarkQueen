@@ -12,6 +12,7 @@ body {
   padding: 20px;
   background: #0a0a0a;
   color: white;
+  position: sticky;
 }
 
 /* Increase the font size of the heading */
@@ -36,6 +37,9 @@ ul {
 }
 li {
   float: left;
+  border: collapse;
+  
+  border: 2px solid #1a1a1a;
 }
 
 li a {
