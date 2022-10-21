@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
 
 import { DatenComponent } from './daten/daten.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocalService } from './localestorage/local_storage.service';
 import { DetailComponent } from './detail/detail.component';
 
