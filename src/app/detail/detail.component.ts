@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Daten } from '../daten/Daten';
 import { Validators, FormBuilder, FormControl, FormArray } from '@angular/forms';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -9,20 +10,16 @@ import { Validators, FormBuilder, FormControl, FormArray } from '@angular/forms'
 })
 export class DetailComponent implements OnInit {
 
-
+daten: Data = []
   ngOnInit(): void {
   }
   Data = this.fb.group({
-    platform: new FormControl(''),
-    username: new FormControl(''),
-    password: new FormControl(''),
-    email: new FormControl(''),
-    odgovori: this.fb.array([this.fb.group]),
+    platform: [""],
+    username: [''],
+    password: [""],
+    email: [""],
     })
-
-
-      addAnswer(): void {
-
+          addAnswer(): void {
       console.log(this.Data.value);
      }
   

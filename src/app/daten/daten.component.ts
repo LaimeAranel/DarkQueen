@@ -12,25 +12,14 @@ import { DetailComponent } from '../detail/detail.component';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-  // daten = Daten;
-  Daten: Daten[] = [];
-  constructor() { }
 
+  daten: Daten[] = [];
+  constructor() { }
+  Daten = Daten;
   selectedList!: Daten;
   onSelect(daten: Daten): void {
     this.selectedList = daten
 
-  }
-  deleteDaten() {
-    Daten === undefined;
-  }
-  password = "hidden"
-  public textShow = true;
-  showText() {
-    this.textShow = true;
-  }
-  hideText() {
-    this.textShow = false;
   }
 
   ngOnInit(): void {

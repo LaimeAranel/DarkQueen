@@ -9,13 +9,12 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let Daten of Daten;">
+    <tr *ngFor="let Daten of daten;">
       <td>{{Daten.id}}</td>
       <td>{{Daten.username}}</td>
       <font style="font-size:0px"> - text 
       <td>{{Daten.password}}</td> </font>
       <td>{{Daten.email}}</td>
-      <button (click)=deleteDaten() >delete</button>
 </tr>
   </tbody>
 </table> 
