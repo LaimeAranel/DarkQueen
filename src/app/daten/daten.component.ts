@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Daten} from 'src/app/daten/Daten'
-import {daten} from 'src/app/daten/mock-Daten'
+import { Daten } from 'src/app/daten/Daten'
+import { daten } from 'src/app/daten/mock-Daten'
 import { map } from 'rxjs/operators';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { LocalService } from '../localestorage/local_storage.service';
-
+import { DetailComponent } from '../detail/detail.component';
 
 @Component({
   selector: 'app-daten',
@@ -12,36 +12,27 @@ import { LocalService } from '../localestorage/local_storage.service';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-  control: FormControl;
- 
-  @Input() Data?: Daten;
-  
-constructor(private fb: FormBuilder) { this.control = fb.control({value: 'my val', disabled: true});}
- Daten = this.fb.group({
-    Platform:[""],
-    username:[""],
-    password:[""],
-    email:[""]
-  })
-
+  // daten = Daten;
+  Daten: Daten[] = [];
+  constructor() { }
 
   selectedList!: Daten;
-  onSelect(daten: Daten): void{
+  onSelect(daten: Daten): void {
     this.selectedList = daten
-    
+
   }
-  deleteDaten(){
-      Daten === undefined; 
+  deleteDaten() {
+    Daten === undefined;
   }
   password = "hidden"
-public textShow = true;
-showText(){
-this.textShow = true;
-}
-hideText(){
-this.textShow = false;
-} 
+  public textShow = true;
+  showText() {
+    this.textShow = true;
+  }
+  hideText() {
+    this.textShow = false;
+  }
 
-ngOnInit(): void {
-}
+  ngOnInit(): void {
+  }
 }

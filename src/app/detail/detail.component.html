@@ -1,13 +1,18 @@
 
-<table class='daten'>
-    <thead>
-      <tr *ngFor="let Daten of daten;">
-        <th>name</th><td>{{Daten.username}}</td>
-        <th>password</th><td>{{Daten.password}}</td>
-        <th>email</th><td>{{Daten.email}}</td>
-      </tr>
-    </thead>
-        
-        
- 
-  </table> 
+<form [formGroup]="Data">
+  <h2>Data</h2>
+
+  <label for="platform">Platform: </label>
+  <input id="platform" type="text" formControlName="platform">
+
+  <label for="username">Username: </label>
+  <input id="username" type="text" formControlName="username">
+
+  <label for="password">Password: </label>
+  <input id="password" type="password" formControlName="password">
+
+  <label for="email">Email: </label>
+  <input id="email" type="email" formControlName="email">
+  <button (click)=addAnswer()>add</button> 
+</form>
+
