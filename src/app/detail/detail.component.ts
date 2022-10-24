@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Daten } from '../daten/Daten';
 import { Validators, FormBuilder, FormControl, FormArray } from '@angular/forms';
 import { Data } from '@angular/router';
-
+import {DataService} from 'src/app/daten/Daten.service' 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -19,10 +19,14 @@ daten: Data = []
     password: [""],
     email: [""],
     })
-          addAnswer(): void {
+    items = this.DataService.getItems();
+
+         addAnswer(): void {
       console.log(this.Data.value);
      }
   
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private DataService: DataService) { }
 
 }

@@ -15,7 +15,6 @@ export class DatenComponent implements OnInit {
 
   daten: Daten[] = [];
   constructor() { }
-  Daten = Daten;
   selectedList!: Daten;
   onSelect(daten: Daten): void {
     this.selectedList = daten
