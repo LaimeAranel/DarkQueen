@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Daten } from '../daten/Daten';
-import { Validators, FormBuilder, FormControl, FormArray } from '@angular/forms';
+import { Validators, FormBuilder, FormControl, FormArray, FormGroup } from '@angular/forms';
 import { Data } from '@angular/router';
 import {DataService} from 'src/app/daten/Daten.service' 
+import { LocalService } from '../localestorage/local_storage.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -13,20 +14,24 @@ export class DetailComponent implements OnInit {
 daten: Data = []
   ngOnInit(): void {
   }
-  Data = this.fb.group({
-    platform: [""],
-    username: [''],
-    password: [""],
-    email: [""],
-    })
+  Data: FormGroup;
+  
+  
     items = this.DataService.getItems();
 
-         addAnswer(): void {
+         addAnswer() {
       console.log(this.Data.value);
      }
   
   constructor(
     private fb: FormBuilder,
-    private DataService: DataService) { }
+    private DataService: DataService) {
+      this.Data = this.fb.group({
+        platform: [""],
+        username: [''],
+        password: [""],
+        email: [""],
+        })
+    }
 
 }
