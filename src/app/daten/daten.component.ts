@@ -12,14 +12,13 @@ import { DetailComponent } from '../detail/detail.component';
   styleUrls: ['./daten.component.css']
 })
 export class DatenComponent implements OnInit {
-
-  daten: Daten[] = [];
+ 
+ daten: Daten[] = [];
   constructor() { }
   selectedList!: Daten;
   onSelect(daten: Daten): void {
     this.selectedList = daten
-
-  }
+ }
 
   ngOnInit(): void {
   }

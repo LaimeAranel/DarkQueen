@@ -8,7 +8,7 @@ import { Daten } from './Daten';
 export class DataService {
   Data: Daten[] = []
   
-  addToCart(daten: Daten) {
+  add(daten: Daten) {
     this.Data.push(daten);
   }
   getItems() {
