@@ -1,6 +1,6 @@
 
 export interface Daten {
-  id: string;
+  platform: string;
   username: string ;
  password: string ;
  email: string ;

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DatenComponent } from './daten/daten.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocalService } from './localestorage/local_storage.service';
-import { DetailComponent } from './detail/detail.component';
+import { DetailForm } from './detail/detail.component';
 
 
 
@@ -15,7 +15,7 @@ import { DetailComponent } from './detail/detail.component';
   declarations: [
     AppComponent,
     DatenComponent,
-    DetailComponent,
+    DetailForm,
 
  
   ],

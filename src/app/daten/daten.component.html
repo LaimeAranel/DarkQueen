@@ -1,7 +1,7 @@
 <table class='Daten'>
   <thead>
     <tr>
-      <th>id</th>
+      <th>platform</th>
       <th>name</th>
       <th>password</th>
       <th>email</th>
@@ -9,8 +9,8 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let Daten of daten;">
-      <td>{{Daten.id}}</td>
+    <tr *ngFor="let Daten of DetailForm;">
+      <td>{{Daten.platform}}</td>
       <td>{{Daten.username}}</td>
       <font style="font-size:0px"> - text 
       <td>{{Daten.password}}</td> </font>
