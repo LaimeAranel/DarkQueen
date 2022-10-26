@@ -39,7 +39,7 @@ li {
   float: left;
   border: collapse;
   
-  border: 2px solid #1a1a1a;
+  border: 2px solid #383838;
 }
 
 li a {
@@ -54,12 +54,12 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(0, 191, 224);
 }
 div {
   background-color: rgb(0, 0, 0)
   
 }
 h1 {
-  background-color: #0a0a0a;
+  background-color: #000000;
 }

@@ -17,10 +17,11 @@ import { Data } from '@angular/router';
 export class DatenComponent implements OnInit { 
 daten: Daten[] = []
 Data = daten
-currentItem = ['Television'];
-lastChanceItem = ['Beanbag'];
-Daten = ["Beispiel"];
-wishlist = ['Drone', 'Computer'];
+
+password= ['Television'];
+username = ['Beanbag'];
+Daten = ["Beispiel","Beispiel","Beispiel","Beispiel"]
+email = ['Drone',];
 
 
   getDaten() {
@@ -29,6 +30,15 @@ wishlist = ['Drone', 'Computer'];
   addData(Daten: string){
   this.Daten.push(Daten)
   }
+  deleteData(){
+  this.Daten.pop()
+  }
+  selected?: Daten;
+onSelect(daten: Daten): void {
+  this.selected = daten;
+}
+
+
   constructor(private DataService: DataService) { }
 
   ngOnInit(): void {
