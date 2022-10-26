@@ -1,24 +1,18 @@
 <table class='Daten'>
   <thead>
     <tr>
-      <th>platform</th>
-      <th>name</th>
-      <th>password</th>
-      <th>email</th>
+      <th>Daten</th>
     </tr>
   </thead>
 
   <tbody>
-    <tr *ngFor="let Daten of DetailForm;">
-      <td>{{Daten.platform}}</td>
-      <td>{{Daten.username}}</td>
-      <font style="font-size:0px"> - text 
-      <td>{{Daten.password}}</td> </font>
-      <td>{{Daten.email}}</td>
+    <tr *ngFor="let Daten of Daten;">  
+      <td>{{Daten}}</td>
+      <button>Delete</button> 
 </tr>
   </tbody>
 </table> 
+<h1>Inputs and Outputs</h1>
 
-<app-detail></app-detail>
+<app-input-output (newDataEvent)="addData($event)"></app-input-output>
 
-    

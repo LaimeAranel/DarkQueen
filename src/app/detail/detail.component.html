@@ -1,5 +1,5 @@
 
-<form [formGroup]="Data">
+<form [formGroup]="DataForm">
 
 
   <label for="platform">Platform: </label>
@@ -13,5 +13,7 @@
 
   <label for="email">Email: </label>
   <input id="email" type="email" formControlName="email">
-  <button (click)=addAnswer()>add</button> 
+  <button (click)=addNewData>add</button>
+  <button (click)=getDaten()>rawr</button> 
+
 </form>

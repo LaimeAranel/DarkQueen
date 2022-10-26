@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailFormComponent } from './detail.component';
+import { InputOutputComponent } from './input-output.component';
 
-describe('DetailForm', () => {
-  let component: DetailFormComponent;
-  let fixture: ComponentFixture<DetailFormComponent>;
+describe('InputOutputComponent', () => {
+  let component: InputOutputComponent;
+  let fixture: ComponentFixture<InputOutputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailFormComponent ]
+      declarations: [ InputOutputComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DetailFormComponent);
+    fixture = TestBed.createComponent(InputOutputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

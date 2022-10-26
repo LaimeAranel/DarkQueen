@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Daten } from './Daten';
+import { daten } from './mock-Daten';
+import { DetailFormComponent } from '../detail/detail.component';
+ import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  Data: Daten[] = []
-  
-  add(daten: Daten) {
-    this.Data.push(daten);
+  Daten: Daten[] = []
+ daten = daten
+
+  getDaten(): Daten[]{ 
+  console.log(daten)
+ return daten
+
   }
-  getItems() {
-    return this.Data;
+
+  add(daten: Daten){
+    console.log(daten)
+    return this.Daten.push(daten);
+    
   }
 }
