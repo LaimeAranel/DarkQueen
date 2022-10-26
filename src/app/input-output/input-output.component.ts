@@ -6,8 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input-output.component.css']
 })
 export class InputOutputComponent implements OnInit {
+@Output() Data = ""
 @Output() newDataEvent = new EventEmitter<string>();
-  
   addNewData(value: string) {
     this.newDataEvent.emit(value);
   }

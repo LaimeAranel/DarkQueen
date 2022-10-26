@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocalService } from './localestorage/local_storage.service';
 import { DetailFormComponent } from './detail/detail.component';
 import { InputOutputComponent } from './input-output/input-output.component';
+import { OutputInputComponent } from './output-input/output-input.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -18,6 +20,7 @@ import { InputOutputComponent } from './input-output/input-output.component';
     DatenComponent,
     DetailFormComponent,
     InputOutputComponent,
+    OutputInputComponent,
 
  
   ],
@@ -27,7 +30,8 @@ import { InputOutputComponent } from './input-output/input-output.component';
     FormsModule,
     RouterModule.forRoot([
       {path: 'Daten', component: DatenComponent },
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [LocalService],
   bootstrap: [AppComponent]
