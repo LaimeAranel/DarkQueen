@@ -6,13 +6,22 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let Daten of Daten;">  
-      <td>{{Daten}}</td>
-      <button>Delete</button> 
-</tr>
+    <tr *ngFor="let Daten of Daten;">
+      <td>
+        <div><button>{{Daten}}</button></div>
+      </td>
+      </tr>
+      <button></button>
+      <div *ngIf="selected">
+        <h2>{{selected.username | uppercase}} Details</h2>
+        <div>id: {{selected.username}</div>
+        <div>id: {{selected.email}</div>
+        <div>id: {{selected.password}</div>
+        <button (click)=deleteData()>Delete</button>
+    </div>
+    
   </tbody>
-</table> 
+</table>
 <h1>Inputs and Outputs</h1>
 
 <app-input-output (newDataEvent)="addData($event)"></app-input-output>
-
