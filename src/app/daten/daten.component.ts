@@ -21,8 +21,8 @@ export class DatenComponent implements OnInit {
 
   constructor(private Symfony:Symfony) {} 
   ngOnInit(): void {this.getRalf()}
-daten:  Daten[] = []
 
+daten:  Daten[] = []
   public getRalf() {
     this.Symfony.getData()
       .subscribe( 
@@ -47,5 +47,5 @@ daten:  Daten[] = []
         })
         
   }
-      
+
       }
