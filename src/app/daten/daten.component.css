@@ -50,10 +50,18 @@ width: 1900px;
 }
 tr:hover {
   text-align: center;
+
+  color: black;
+
+
   background-color: rgb(0, 184, 216);
 }
 tbody{
   text-align: center;
+
+  color: white;
+
+
 background-color: rgb(70, 70, 70);
 height: 50px;
 }

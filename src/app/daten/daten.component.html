@@ -1,23 +1,23 @@
-<table class='Daten'>
-  <thead>
-    <tr>
-      <th>Daten</th>
+    <table class='daten'>
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th>username</th>
+          <th>email</th>
+          <th>password</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let Daten of daten;">  
+          <td>{{Daten.platform}}</td>
+          <td>{{Daten.username}}</td>
+          <td>{{Daten.email}}</td>
+          <font style="font-size:0px"> - text 
+      <td>{{Daten.password}}</td> </font>
+      <button (click)=deleteData()>Delete</button>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let Daten of Daten;">
-      <td>
-        <div><button>{{Daten}}</button></div>
-      </td>
-      </tr>
-      <button></button>
-      <div *ngIf="selected">
-        <h2>{{selected.username | uppercase}} Details</h2>
-        <div>id: {{selected.username}</div>
-        <div>id: {{selected.email}</div>
-        <div>id: {{selected.password}</div>
-        <button (click)=deleteData()>Delete</button>
+        
     </div>
     
   </tbody>
@@ -25,3 +25,4 @@
 <h1>Inputs and Outputs</h1>
 
 <app-input-output (newDataEvent)="addData($event)"></app-input-output>
+
