@@ -17,7 +17,33 @@ import { platformBrowser } from '@angular/platform-browser';
 export class DatenComponent implements OnInit { 
 
 
+
  http: any;
+daten: Daten[] = []
+Data = daten
+
+password= ['Television'];
+username = ['Beanbag'];
+Daten = ["Beispiel","Beispiel","Beispiel","Beispiel"]
+email = ['Drone',];
+
+
+  getDaten() {
+    this.DataService.getDaten();
+  }
+  addData(Daten: string){
+  this.Daten.push(Daten)
+  }
+  deleteData(){
+  this.Daten.pop()
+  }
+  selected?: Daten;
+onSelect(daten: Daten): void {
+  this.selected = daten;
+}
+
+  constructor(private DataService: DataService) { }
+
 
   constructor(private Symfony:Symfony) {} 
   ngOnInit(): void {this.getRalf()}

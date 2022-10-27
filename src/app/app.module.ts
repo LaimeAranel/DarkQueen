@@ -8,8 +8,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocalService } from './localestorage/local_storage.service';
 import { DetailFormComponent } from './detail/detail.component';
 import { InputOutputComponent } from './input-output/input-output.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { Symfony } from './config/symfony.service';
+=======
+import { OutputInputComponent } from './output-input/output-input.component';
+
 
 
 
@@ -20,6 +24,7 @@ import { Symfony } from './config/symfony.service';
     DatenComponent,
     DetailFormComponent,
     InputOutputComponent,
+    OutputInputComponent,
 
  
   ],
@@ -30,7 +35,8 @@ import { Symfony } from './config/symfony.service';
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'Daten', component: DatenComponent },
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [LocalService, Symfony],
   bootstrap: [AppComponent]

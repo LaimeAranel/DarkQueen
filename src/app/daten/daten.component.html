@@ -15,7 +15,14 @@
           <td>{{Daten.email}}</td>
           <font style="font-size:0px"> - text 
       <td>{{Daten.password}}</td> </font>
+      <button (click)=deleteData()>Delete</button>
     </tr>
-      </tbody>
-    </table> 
-    <app-detail></app-detail>
+        
+    </div>
+    
+  </tbody>
+</table>
+<h1>Inputs and Outputs</h1>
+
+<app-input-output (newDataEvent)="addData($event)"></app-input-output>
+
