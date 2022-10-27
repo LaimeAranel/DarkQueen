@@ -1,20 +1,19 @@
-<table class='Daten'>
-  <thead>
-    <tr>
-      <th>Daten</th>
+    <table class='daten'>
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th>username</th>
+          <th>email</th>
+          <th>password</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let Daten of daten;">  
+          <td>{{Daten.platform}}</td>
+          <td>{{Daten.username}}</td>
+          <td>{{Daten.email}}</td>
+          <td>{{Daten.password}}</td>
     </tr>
-  </thead>
-
-  <tbody>
-    <tr *ngFor="let Daten of Daten;">
-      <td>{{Daten}}</td>
-      <button (click)=deleteData()>Delete</button>
-      <button (click)="selected()"></button>
-      <span></span>
-    </tr> 
-
-  </tbody>
-</table>
-<h1>Inputs and Outputs</h1>
-
-<app-input-output (newDataEvent)="addData($event)"></app-input-output>
+      </tbody>
+    </table> 

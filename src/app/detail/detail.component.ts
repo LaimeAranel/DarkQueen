@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Daten } from '../daten/Daten';
 import { Validators, FormBuilder, FormControl, FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import {DataService} from 'src/app/daten/Daten.service' 
+import { Symfony } from '../config/symfony.service';
 import { LocalService } from '../localestorage/local_storage.service';
 import { DatenComponent } from '../daten/daten.component';
 import { Output, EventEmitter } from '@angular/core';
@@ -12,8 +12,7 @@ import { Output, EventEmitter } from '@angular/core';
 })
 
 export class DetailFormComponent implements OnInit { 
-  ngOnInit(): void {
-    this.getDaten();
+  ngOnInit(): void {;
   }
   
 
@@ -25,13 +24,7 @@ export class DetailFormComponent implements OnInit {
 
 
 
-    getDaten(): void {
-      this.Daten = this.DataService.getDaten();
-      console.log(this.Daten)
-    }
-    delete(){
-      this.DataService.Daten.pop();
-    }
+  
 addAnswer(){
       console.log(this.DataForm.value);
      }
@@ -41,7 +34,7 @@ addAnswer(){
 }
    constructor(
     private fb: FormBuilder,
-    private DataService: DataService) {
+    private Symfony:Symfony) {
       this.DataForm = this.fb.group({ 
         platform: [""],
         username: [''],

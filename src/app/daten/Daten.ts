@@ -1,14 +1,10 @@
-
 export class Daten {
-  platform: string;
-  username: string ;
- password: string ;
- email: string ;
- constructor( id:string,username:string,password:string,email:string)
-{
-this.platform=id || '';    
-this.username=username || '';
-this.password=password || '';
-this.email=email || '';
-}}
+  constructor( 
+  public platform: string = '',
+  public username: string = '',
+  public password: string = '',
+  public email: string = '',
+  )
 
+{}
+}
