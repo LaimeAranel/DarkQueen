@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Daten } from '../daten/Daten';
+import { UserDaten } from '../daten/Daten';
 import { Validators, FormBuilder, FormControl, FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Symfony } from '../config/symfony.service';
 import { LocalService } from '../localestorage/local_storage.service';
@@ -16,7 +16,7 @@ import { Observable, VirtualTimeScheduler } from 'rxjs';
 export class DetailFormComponent implements OnInit { 
   ngOnInit(): void {;
   }
-
+@Output()  newDataEvent = new EventEmitter<string>()
 
   baseURL: string = "https://localhost:8000/api/data";
 http: any

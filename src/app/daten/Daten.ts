@@ -1,4 +1,4 @@
-export class Daten {
+export class UserDaten {
   constructor( 
   public platform: string = '',
   public username: string = '',

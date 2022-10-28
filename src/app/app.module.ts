@@ -11,7 +11,6 @@ import { InputOutputComponent } from './input-output/input-output.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { Symfony } from './config/symfony.service';
-=======
 import { OutputInputComponent } from './output-input/output-input.component';
 
 
@@ -36,7 +35,6 @@ import { OutputInputComponent } from './output-input/output-input.component';
     RouterModule.forRoot([
       {path: 'Daten', component: DatenComponent },
     ]),
-    BrowserAnimationsModule
   ],
   providers: [LocalService, Symfony],
   bootstrap: [AppComponent]

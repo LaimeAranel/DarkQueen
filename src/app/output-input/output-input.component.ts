@@ -8,11 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class OutputInputComponent {
   @Input() Daten = '';
   @Output() deleteRequest = new EventEmitter<string>();
+
   constructor() { }
-  //delete() {
-    //console.warn('Child says: emitting item deleteRequest with', this.Daten);
-    //this.deleteRequest.emit(this.Daten);
-  //}
+
+  delete() {
+    console.warn('Child says: emitting item deleteRequest with', this.Daten);
+    this.deleteRequest.emit(this.Daten);
+  }
   ngOnInit(): void {
   }
 

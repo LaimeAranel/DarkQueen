@@ -1,5 +1,6 @@
-<label for="data-input">Add new Data:</label>
-<input type="text" id="data-input" #newItem>
+<h2>Child component with @Output()</h2>
 
-<button type="button" (click)="addNewData(newItem.value)">Add</button>
+<label for="item-input">Add an item:</label>
+<input type="text" id="Daten.platform" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
 

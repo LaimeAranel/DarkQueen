@@ -1,12 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Daten } from 'src/app/daten/Daten'
+import { Component, OnInit } from '@angular/core';
+import { UserDaten } from 'src/app/daten/Daten'
 import { Symfony } from 'src/app/config/symfony.service';
-import { map } from 'rxjs/operators';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { LocalService } from '../localestorage/local_storage.service';
-import { DetailFormComponent } from '../detail/detail.component';
-import { Data } from '@angular/router';
-import { platformBrowser } from '@angular/platform-browser';
+import { mockdaten } from './mock-Daten';
 
 
 @Component({
@@ -19,45 +14,35 @@ export class DatenComponent implements OnInit {
 
 
  http: any;
-daten: Daten[] = []
-Data = daten
-
-password= ['Television'];
-username = ['Beanbag'];
-Daten = ["Beispiel","Beispiel","Beispiel","Beispiel"]
-email = ['Drone',];
+fișiere: UserDaten[] = []
+Data = mockdaten
 
 
-  getDaten() {
-    this.DataService.getDaten();
-  }
-  addData(Daten: string){
-  this.Daten.push(Daten)
+  addData(){
+  console.log(this.addData())
   }
   deleteData(){
-  this.Daten.pop()
+  this.fișiere.pop()
   }
-  selected?: Daten;
-onSelect(daten: Daten): void {
+  selected?: UserDaten;
+onSelect(daten: UserDaten): void {
   this.selected = daten;
 }
 
-  constructor(private DataService: DataService) { }
+  constructor(private Symfony:Symfony) { }
 
-
-  constructor(private Symfony:Symfony) {} 
   ngOnInit(): void {this.getRalf()}
 
-daten:  Daten[] = []
-  public getRalf() {
+daten:  UserDaten[] = []
+  public getRalf() { //Ralf bleibt Ralf
     this.Symfony.getData()
       .subscribe( 
         (response: { [x: string]: any[]; }) => {
-          let commentsJson = [];                           //next() callback
+          let commentsJson = [];                           
           commentsJson = response["hydra:member"];
           commentsJson.forEach((commentJson: any) => {
           console.log(commentJson);
-          let DatenEntity= new Daten();
+          let DatenEntity= new UserDaten();
           DatenEntity.platform = commentJson.platform;
           DatenEntity.username = commentJson.username;
           DatenEntity.email = commentJson.email;
@@ -73,5 +58,9 @@ daten:  Daten[] = []
         })
         
   }
-
-      }
+  AddNewData(){
+    var body = this.daten
+    
+    
+    this.http.put(this.http ,body).subscribe() }
+  }

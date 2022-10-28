@@ -12,17 +12,14 @@
         <tr *ngFor="let Daten of daten;">  
           <td>{{Daten.platform}}</td>
           <td>{{Daten.username}}</td>
-          <td>{{Daten.email}}</td>
-          <font style="font-size:0px"> - text 
-      <td>{{Daten.password}}</td> </font>
-      <button (click)=deleteData()>Delete</button>
+          <td>{{Daten.email}}</td> 
+      <td>{{Daten.password}}</td> 
+    <button (click)=deleteData()>Delete</button>
     </tr>
-        
-    </div>
     
   </tbody>
 </table>
-<h1>Inputs and Outputs</h1>
 
-<app-input-output (newDataEvent)="addData($event)"></app-input-output>
+<app-detail></app-detail>
+
 

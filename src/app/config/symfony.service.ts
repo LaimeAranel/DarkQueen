@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
-import { Daten } from '../daten/Daten';
-import { Router } from '@angular/router'; 
-import { DetailFormComponent } from '../detail/detail.component';
-import { HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { UserDaten } from '../daten/Daten';
 @Injectable() export class Symfony {
 
   
@@ -15,6 +11,8 @@ import { HttpHeaders } from '@angular/common/http';
       getData(): Observable<any> {
         return this.http.get(this.baseURL)
       }
-
+      AddUserData(formData: UserDaten): Observable<any>{
+        return this.http.post(this.baseURL, formData, )
+      }
      
 }
