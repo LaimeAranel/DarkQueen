@@ -29,12 +29,12 @@ onSelect(daten: UserDaten): void {
   this.selected = daten;
 }
 
-  constructor(private Symfony:Symfony) { }
+  constructor(private Symfony:Symfony,) {}
 
-  ngOnInit(): void {this.getRalf()}
+  ngOnInit(): void {this.getUserDaten()}
 
 daten:  UserDaten[] = []
-  public getRalf() { //Ralf bleibt Ralf
+  public getUserDaten() { //Ralf bleibt Ralf
     this.Symfony.getData()
       .subscribe( 
         (response: { [x: string]: any[]; }) => {
@@ -60,7 +60,9 @@ daten:  UserDaten[] = []
   }
   AddNewData(){
     var body = this.daten
-    
-    
     this.http.put(this.http ,body).subscribe() }
-  }
+  
+     
+    ;
+  
+}

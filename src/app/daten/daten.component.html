@@ -15,11 +15,9 @@
           <td>{{Daten.email}}</td> 
       <td>{{Daten.password}}</td> 
     <button (click)=deleteData()>Delete</button>
-    </tr>
+</tr>
     
   </tbody>
 </table>
-
-<app-detail></app-detail>
-
+<app-input-output (AddNewData)="AddNewData()"></app-input-output>
 
